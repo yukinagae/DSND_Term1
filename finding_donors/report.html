@@ -1,64 +1,8 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<title>finding_donors slides</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head><meta charset="utf-8" />
+<title>finding_donors</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-
-</script>
-
-<!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
-<!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11770,137 +11714,66 @@ ul.typeahead-list > li > a {
 .ansi-bold { font-weight: bold; }
 
     </style>
+<style type="text/css">
+    
+    </style>
 
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-  font-size: 160%;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.reveal pre code {
-  padding: 0px;
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
-.reveal .controls .navigate-left,
-.reveal .controls .navigate-left.enabled {
-  border-right-color: #727272;
-}
-.reveal .controls .navigate-left.enabled:hover,
-.reveal .controls .navigate-left.enabled.enabled:hover {
-  border-right-color: #dfdfdf;
-}
-.reveal .controls .navigate-right,
-.reveal .controls .navigate-right.enabled {
-  border-left-color: #727272;
-}
-.reveal .controls .navigate-right.enabled:hover,
-.reveal .controls .navigate-right.enabled.enabled:hover {
-  border-left-color: #dfdfdf;
-}
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #727272;
-}
-.reveal .controls .navigate-up.enabled:hover,
-.reveal .controls .navigate-up.enabled.enabled:hover {
-  border-bottom-color: #dfdfdf;
-}
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #727272;
-}
-.reveal .controls .navigate-down.enabled:hover,
-.reveal .controls .navigate-down.enabled.enabled:hover {
-  border-top-color: #dfdfdf;
-}
-.reveal .progress span {
-  background: #727272;
-}
-div.input_area {
-  padding: 0.06em;
-}
-div.code_cell {
-  background-color: transparent;
-}
-div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
-}
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-div.text_cell.rendered .rendered_html {
-  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
-  overflow-y: hidden;
-}
-a.anchor-link {
-  /* There is still an anchor, we are only hidding it */
-  display: none;
-}
-.rendered_html p {
-  text-align: inherit;
-}
-::-webkit-scrollbar
-{
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar *
-{
-  background:transparent;
-}
-::-webkit-scrollbar-thumb
-{
-  background: #727272 !important;
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-</head>
-
-
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
 <body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
 
-
-<div class="reveal">
-<div class="slides">
-<section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13158,8 +13031,7 @@ Testing set has 9045 samples.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Metrics-and-the-Naive-Predictor">Metrics and the Naive Predictor<a class="anchor-link" href="#Metrics-and-the-Naive-Predictor">&#182;</a></h3><p><em>CharityML</em>, equipped with their research, knows individuals that make more than \$50,000 are most likely to donate to their charity. Because of this, *CharityML* is particularly interested in predicting who makes more than \$50,000 accurately. It would seem that using <strong>accuracy</strong> as a metric for evaluating a particular model's performace would be appropriate. Additionally, identifying someone that <em>does not</em> make more than \$50,000 as someone who does would be detrimental to *CharityML*, since they are looking to find individuals willing to donate. Therefore, a model's ability to precisely predict those that make more than \$50,000 is <em>more important</em> than the model's ability to <strong>recall</strong> those individuals. We can use <strong>F-beta score</strong> as a metric that considers both precision and recall:</p>
-<p>$$ F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{\left( \beta^2 \cdot precision \right) + recall} $$</p>
-<p>In particular, when $\beta = 0.5$, more emphasis is placed on precision. This is called the <strong>F$_{0.5}$ score</strong> (or F-score for simplicity).</p>
+$$ F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{\left( \beta^2 \cdot precision \right) + recall} $$<p>In particular, when $\beta = 0.5$, more emphasis is placed on precision. This is called the <strong>F$_{0.5}$ score</strong> (or F-score for simplicity).</p>
 <p>Looking at the distribution of classes (those who make at most \$50,000, and those who make more), it's clear most individuals do not make more than \$50,000. This can greatly affect <strong>accuracy</strong>, since we could simply say <em>"this person does not make more than \$50,000"</em> and generally be right, without ever looking at the data! Making such a statement would be called <strong>naive</strong>, since we have not considered any information to substantiate the claim. It is always important to consider the <em>naive prediction</em> for your data, to help establish a benchmark for whether a model is performing well. That been said, using that prediction would be pointless: If we predicted all people made less than \$50,000, <em>CharityML</em> would identify no one as donors.</p>
 <h4 id="Note:-Recap-of-accuracy,-precision,-recall">Note: Recap of accuracy, precision, recall<a class="anchor-link" href="#Note:-Recap-of-accuracy,-precision,-recall">&#182;</a></h4><p><strong> Accuracy </strong> measures how often the classifier makes the correct prediction. It’s the ratio of the number of correct predictions to the total number of predictions (the number of test data points).</p>
 <p><strong> Precision </strong> tells us what proportion of messages we classified as spam, actually were spam.
@@ -13289,10 +13161,12 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </li>
 <li>Cons: <a href="https://www.quora.com/What-are-the-advantages-of-logistic-regression-over-decision-trees-Are-there-any-cases-where-its-better-to-use-logistic-regression-instead-of-decision-trees">resource</a><ul>
 <li>may not work well when a dataset can be separated by a non-linear decision boundary</li>
+<li>assums a dataset has few outliers : <a href="https://stats.stackexchange.com/questions/279010/how-does-outlier-impact-logistic-regression">resource</a></li>
 </ul>
 </li>
-<li>When to use?: <a href="https://www.quora.com/What-are-the-advantages-of-logistic-regression-over-decision-trees-Are-there-any-cases-where-its-better-to-use-logistic-regression-instead-of-decision-trees">resource</a><ul>
-<li>works well when a dataset can be linealy separatable</li>
+<li>What makes this model a good candidate for the problem, given what you know about the data?: <a href="https://www.quora.com/What-are-the-advantages-of-logistic-regression-over-decision-trees-Are-there-any-cases-where-its-better-to-use-logistic-regression-instead-of-decision-trees">resource</a><ul>
+<li>Generally, it is a good idea to try a simple model first. Logistic Regression is one of the simplest algorithms used in many cases.</li>
+<li>Some of the features of the dataset were skewed, but we have log-transformed those features so we maybe able to use Logistic Regression.</li>
 </ul>
 </li>
 </ul>
@@ -13300,30 +13174,41 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <li>Support Vector Machines (SVM)<ul>
 <li>Real-world application: protein remote homology detection in biology (see: <a href="https://data-flair.training/blogs/applications-of-svm/">resource</a>)</li>
 <li>Pros <a href="https://profs.info.uaic.ro/~ciortuz/SLIDES/svm.pdf">resource</a><ul>
-<li>can find optimal separation hyperplane (the decision bounary of SVM makes sense to human)</li>
-<li>can deal with high dimentional data</li>
+<li>can find optimal separation hyperplane</li>
+<li>can recognize complex patterns if using kernel tricks appropriately</li>
 </ul>
 </li>
 <li>Cons: <a href="https://profs.info.uaic.ro/~ciortuz/SLIDES/svm.pdf">resource</a><ul>
 <li>require a lot of memory</li>
 <li>takes a lot of time to learn (it is clear to see the result later)</li>
+<li>may be difficult to understand the final model of SVM, and also be difficult to understand each feature impact on the result of the model.</li>
 </ul>
 </li>
-<li>When to use?: SVM might make sense when a decision boundary should be visualized and understood by human</li>
+<li>What makes this model a good candidate for the problem, given what you know about the data?:<ul>
+<li>The problem of finding donors do not require us to understand and interpret the final model.</li>
+<li>SVM can be expected to find optimal separtion hyperplane of the dataset even if the dataset has many features (high dimensions).</li>
 </ul>
 </li>
-<li>Ensemble Methods (Gradient Boosting, Random Forest)<ul>
-<li>Real-world application: machine fault diagnosis in factory (see: <a href="https://link.springer.com/chapter/10.1007/978-1-84628-814-2_82">resource</a>)</li>
+</ul>
+</li>
+<li>Gradient Boosting<ul>
+<li>Real-world application: ranking algorithms in search engine companies (see: <a href="https://www.kaggle.com/kashnitsky/topic-10-gradient-boosting">resource</a>)</li>
 <li>Pros: <a href="https://towardsdatascience.com/the-random-forest-algorithm-d457d499ffcd">resource</a><ul>
-<li>tends not to overfit a dataset since ensemble methods combine learners</li>
+<li>tends not to overfit a dataset since Gradient Boosting combine learners as other ensemble methods do</li>
 <li>provides feature importances</li>
+<li>provides good results if a model is carefully and well tuned (used as winner solutions many times in Kaggle competitions): <a href="https://www.kaggle.com/kashnitsky/topic-10-gradient-boosting">resource</a></li>
 </ul>
 </li>
 <li>Cons: <a href="https://www.quora.com/What-are-the-pros-and-cons-of-GLM-vs-Random-forest-vs-SVM">resource</a><ul>
 <li>each learner should be slightly different and should work well respectively</li>
+<li>generallay training time takes longer than other ensemble methods such as Random Forest since the trees of Gradient Boosting are build sequentially</li>
 </ul>
 </li>
-<li>When to use?: ensemble methods can be used and tried most of the time because they provide feature importance, giving us better understanding of a data</li>
+<li>What makes this model a good candidate for the problem, given what you know about the data?:<ul>
+<li>Ensemble methods such as Gradient Boosting can be used and tried most of the time because they provide feature importances. Regarding the problem of finding donors, we have generated many dummy features and it will be difficult to guess which features are important. Feature importances might give us better understanding of the dataset.</li>
+<li>Gradient Boosting is one of the state-of-the-art algorithms which can not only deal with complex patterns but also can provide a robust model.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -14960,74 +14845,12 @@ F-score on testing data: 0.7243
 
 </div>
 </div>
-</div></section></section>
 </div>
-</div>
-
-<script>
-
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "reveal.js/lib/js/head.min.js",
-      "reveal.js/js/reveal.js"
-    ],
-
-    function(head, Reveal){
-
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-
-            transition: "slide",
-
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: "reveal.js/lib/js/classList.js",
-                  condition: function() { return !document.body.classList; } },
-                { src: "reveal.js/plugin/notes/notes.js",
-                  async: true,
-                  condition: function() { return !!document.body.classList; } }
-            ]
-        });
-
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
-
-        Reveal.addEventListener('slidechanged', update);
-
-        function setScrollingSlide() {
-            var scroll = false
-            if (scroll === true) {
-              var h = $('.reveal').height() * 0.95;
-              $('section.present').find('section')
-                .filter(function() {
-                  return $(this).height() > h;
-                })
-                .css('height', 'calc(95vh)')
-                .css('overflow-y', 'scroll')
-                .css('margin-top', '20px');
-            }
-        }
-
-        // check and set the scrolling slide every time the slide change
-        Reveal.addEventListener('slidechanged', setScrollingSlide);
-
-    }
-
-);
-</script>
-
+    </div>
+  </div>
 </body>
+
+ 
 
 
 </html>
